@@ -1,0 +1,284 @@
+body{
+  font-family: 'Objectivity' !important;
+  background-color: #FEF3E9 !important;
+  color: #130C03;
+
+}
+.navLeft{
+  color: #130C03;
+  
+}
+.color_purple{
+  color: #4A2B93
+}
+.color_black{
+  color:#130C03
+}
+.color_yellow{
+  color:#F7B818
+}
+.color_green{
+  color:#A3CA34
+}
+.color_lightblue{
+  color: #4AAAD2;
+}
+.color_orange{
+  color:#F9974D
+}
+
+
+.color_white{
+  color: white;
+}
+.h1_size{
+  font-weight: 500 !important;
+font-size: 75px !important;
+}
+.h1_size_footer{
+  font-weight: 500 !important;
+font-size: 60px !important;
+}
+
+.leftMargin{
+  margin-left: 3rem !important;
+}
+
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Black.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity super";
+  src: url("../fonts/Objectivity-Super.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Thin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-ThinSlanted.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity superslanted";
+  src: url("../fonts/Objectivity-SuperSlanted.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-ExtraBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-BoldSlanted.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-RegularSlanted.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-LightSlanted.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-ExtraBoldSlanted.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-MediumSlanted.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Objectivity";
+  src: url("../fonts/Objectivity-BlackSlanted.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+.margin_top{
+  margin-top: 12rem;
+}
+
+.pr5{
+  padding-right: 3rem !important;
+}
+.pl5{
+  padding-left: 3rem !important ;
+ }
+
+ .serviceWidth{
+  margin-top: 6rem;
+  width: 75%;
+ }
+
+ .callMargin{
+   margin-top: 5rem;
+ }
+ .addressMargin{
+  margin-top: 6.5rem
+ }
+ .smileWidth{
+  width: 75%;
+ }
+ .openMargin{
+  margin-top: 19rem
+ }
+ .emailmargin{
+  margin-top: 8.7rem
+ }
+
+@media screen and (max-width: 800px) {
+ .h1_size{
+   font-size: 40px !important;
+ }
+ .margin_top{
+   margin-top: 6rem;
+ }
+
+ .pr5{
+  padding-right: 1rem !important;
+ }
+ .pl5{
+  padding-left: 1rem !important;
+ }
+ .serviceWidth{
+  margin-top: 2rem;
+  width: 100%;
+ }
+ .callMargin{
+  margin-top: 2rem;
+}
+.addressMargin{
+  margin-top: 3.5rem
+ }
+ .smileWidth{
+  width: 33.35%;
+ }
+ .openMargin{
+  margin-top: 2rem
+ }
+ .emailmargin{
+  margin-top: 3.5rem
+ }
+ .widthArrow{
+  width: 34px
+ }
+ .textCenter{
+   text-align: center;
+ }
+ .h1_size_footer{
+   font-size: 40px !important;
+ }
+
+}
+.imge1{
+  overflow-x: hidden;
+  display: flex;
+}
+.im {
+ 
+  margin: 0px 100px;
+  animation: scrolling1 7s linear infinite ;
+}
+
+@keyframes scrolling1 {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(calc(-220px*10));}
+}
+
+.imgee{
+
+  margin: 0px 100px;
+  animation: scrolling2 7s linear infinite;
+  animation-direction: reverse;
+}
+@keyframes scrolling2 {
+  0% {transform: translateX(100);}
+  100% {transform: translateX(calc(-220px*10));}
+} 
+
+.marTop200{
+  margin-top: 200px;
+}
+.marTop160{
+  margin-top: 160px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  text-align: center;
+  width: 170px;
+  margin-right: 52px;
+  margin-top: 40px;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+
