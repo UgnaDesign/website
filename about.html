@@ -40,40 +40,24 @@
                     <div class="col-md-4">
                         <h1 class="color_black d-none d-sm-block">Our <br><span class="color_purple">Vision</span></h1>
                         <h1 class="color_black d-block d-sm-none">Our <span class="color_purple">Vision</span></h1>
-
-
                     </div>
+
                     <div class="col-md-8 text-justify"
                         style="color: black; font-size: 36px;font-weight: 500;line-height: 1.3;">
                         "We want to be a create hub for businesses, a churner of great ideas and brands of the future."
                     </div>
-
                 </div>
             </div>
 
             <div class=" container-fuild w-100 marTop200">
-                <div class="imge1">
-                    <img class="im" src="images/Communication.png" alt="">
-                    <img class="im" src="images/Teamwork.png" alt="">
-                    <img class="im" src="images/Passion.png" alt="">
-
-                </div>
-
-                <div class="imge1 mt-5">
-
-
-                    <img class="imgee" src="images/Eco-Friendly.png" alt="">
-                    <img class="imgee" src="images/Responsibility.png" alt="">
-                    <img class="imgee" src="images/Value.png" alt="">
-                </div>
-
+                <div class="imge1" id="animated1"></div>
+                <div class="imge1 mt-5" id="animated2"></div>
             </div>
 
             <div class=" container marTop200">
                 <h1 class="color_black d-none d-sm-block">We <br><span class="color_lightblue">Believe</span> In...</h1>
                 <div class="row mt-5">
                     <div class="col-md-6 text-justify">
-
                         <div>
                             providing our clients with the best solutions, a professional brand and digital
                             product designs at an affordable price. We believe that your product or idea should help
@@ -83,10 +67,7 @@
                         <div class="mt-2">
                             We also believe in giving individual attention to each of our clients and building a lasting
                             relationship based on trust and satisfaction.
-
                         </div>
-
-
 
                     </div>
                     <div class="col-md-6 text-justify">
@@ -94,7 +75,6 @@
                             UGNA is a small group of experienced and passionate professionals with a focus on logo,
                             website and app UI/UX designs.
                         </div>
-
 
                         <div class="mt-2">
                             We approach your project with an aim to build a successful brand through strategic thinking,
@@ -106,70 +86,33 @@
                     <!-- <div class="col-md-6 text-justify mt-3" >
             Started in 2020 to help small and medium sized businesses compete in the marketplace with modern designs, intuitive digital experiences for your customers, and to truly portray your brand and values.
         </div> -->
-
                 </div>
             </div>
-
 
             <div class="marTop200 container">
                 <h1 class="color_black d-none d-sm-block">Our <br><span class="color_yellow">Clients</span></h1>
 
-
-                <div class="flex-container">
-                    <div><img class="w-100" src="images/E2E.png" alt=""></div>
-                    <div><img class="w-100" src="images/LaundroLab.png" alt=""></div>
-                    <div>
-                        <img class="w-100" src="images/Perromart.png" alt="">
-
-                    </div>
-                    <div>
-                        <img class="w-100" src="images/herby.png" alt="">
-
-                    </div>
-                    <div>
-                        <img class="w-100" src="images/Petbooks.png" alt="">
-
-                    </div>
-                    <div>
-                        <img class="w-100" src="images/Shopexa.png" alt="">
-
-                    </div>
-                    <div>
-                        <img class="w-100" src="images/Prosple.png" alt="">
-
-                    </div>
-                    <div>
-                        <img class="w-100" src="images/Vgoodnews.png" alt="">
-
-                    </div>
-                    
-
-                    </div>
-
+                <div class="flex-container" id="flex-container">
+                    </div></div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
         </div>
+
         <my-footer></my-footer>
-
-
-
     </section>
 
+    <script>
+        const animated1 = ["Communication", "Teamwork", "Passion"];
+        const animated2 = ["Eco-Friendly", "Responsibility", "Value"];
+        const clients = ["E2E", "LaundroLab", "Perromart", "herby", "Petbooks", "Shopexa", "Prosple", "Vgoodnews"];
 
+        const animated1Content = animated1.map((item) => `<img class="im" src="images/${item}.png" alt="">`);
+        const animated2Content = animated2.map((item) => `<img class="imgee" src="images/${item}.png" alt="">`);
+        const clientsContent = clients.map((item) => `<div><img class="w-100" src="images/${item}.png" alt=""></div>`);
 
-
-
-
-
-
+        document.getElementById("animated1").innerHTML = animated1Content;
+        document.getElementById("animated2").innerHTML = animated2Content;
+        document.getElementById("flex-container").innerHTML = clientsContent;
+    </script>
 </body>
-
 </html>
