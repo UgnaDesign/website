@@ -71,47 +71,8 @@
                     </div>
                 </div>
 
-                <div class="row ">
-                    <div class="col-md-6 pr5 mt-5" >
-                        <img src="images/BoostapiThumbnail.jpg" class="w-100" alt="" srcset=""> 
-                        <div class='mt-4 '>
-                            <h4>Boostapi - Web Design</h4>
-                        </div>
-                        <div class="mt-2 pr-4">
-                            BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users.
-                        </div>
-                    </div>
-                    <div class="col-md-6 pl5 mt-5">
-                        <img src="images/BrioThumbnail.jpg" class="w-100" alt="" srcset=""> 
-                        <div class='mt-4 '>
-                            <h4>Brio - Logo Design</h4>
-                        </div>
-                        <div class="mt-2 pr-4">
-                            Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-md-6  pr5 mt-5">
-                        <img src="images/Vgood.newThumbnail.jpg" class="w-100" alt="" srcset=""> 
-                        <div class='mt-4 '>
-                            <h4>Vgood.news - App Design</h4>
-                        </div>
-                        <div class="mt-2 pr-4">
-                            positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!
-                        </div>
-                    </div>
-                    <div class="col-md-6 pl5 mt-5">
-                        <img src="images/SpecoThumbnail.jpg" class="w-100" alt="" srcset=""> 
-                        <div class='mt-4 '>
-                            <h4>Speco - Branding</h4>
-                        </div>
-                        <div class="mt-2 pr-4">
-                            Logo Design & branding for a glasses manufacturer company.
-                        </div>
-                    </div>
-                </div>
+                <div class="row" id="design1"></div>
+                <div class="row" id="design2"></div>
             </div>
 
             <div style="margin-top: 200px;">
@@ -123,39 +84,9 @@
                             Services that your business needs and we provide. Services that your business needs and we provide.
                         </div>
                     </div>
-                    <div class="col-md-3 col-6 mt-3">
-                        <div>
-                            <h5>01</h5>
-                            <div class="d-none d-sm-block">Website Design</div>
-                            <div class="d-block d-sm-none">Website <br> Design</div>
-                        </div>
 
-                        <div class="mt-5">
-                            <h5>02</h5>
-                            <div>UI/UX Design</div>
-                        </div>
-                        <div class="mt-5">
-                            <h5>03</h5>
-                            <div class="d-none d-sm-block">Mobile App Design</div>
-                            <div class="d-block d-sm-none">Mobile App <br> Design</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 mt-3">
-                        <div>
-                            <h5>04</h5>
-                            <div>Research & Discovery</div>
-                        </div>
-
-                        <div class="mt-5">
-                            <h5>05</h5>
-                            <div>Wireframing</div>
-                        </div>
-
-                        <div class="mt-5">
-                            <h5>06</h5>
-                            <div>Prototyping & Mockups</div>
-                        </div>
-                    </div>
+                    <div class="col-md-3 col-6 mt-3" id="services1"></div>
+                    <div class="col-md-3 col-6 mt-3" id="services2"></div>
                 </div>
             </div>
 
@@ -210,5 +141,54 @@
     </section>
 
     <my-footer></my-footer>
+
+    <script>
+        const designs1 = [
+            {source: "BoostapiThumbnail", title: "Boostapi - Web Design", content: "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."},
+            {source: "BrioThumbnail", title: "Brio - Logo Design", content: "Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'."},
+        ];
+
+        const designs2 = [
+            {source: "Vgood.newThumbnail", title: "Vgood.news - App Design", content: "Positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!"},
+            {source: "SpecoThumbnail", title: "Speco - Branding", content: "Logo Design & branding for a glasses manufacturer company."},
+        ];
+
+        const services1 = [
+            {number: "1", content: "Website Design"},
+            {number: "2", content: "UI/UX Design"},
+            {number: "3", content: "Mobile App Design"},
+        ];
+        const services2 = [
+            {number: "4", content: "Research & Discovery"},
+            {number: "5", content: "Wireframing"},
+            {number: "6", content: "Prototyping & Mockups"},
+        ];
+
+        const design1Content = designs1.map((item) => `<div class="col-md-6 pr5 mt-5">
+            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
+            <div class='mt-4'><h4>${item.title}</h4></div>
+            <div class="mt-2 pr-4">${item.content}</div>
+        </div>`);
+        const design2Content = designs2.map((item) => `<div class="col-md-6 pr5 mt-5">
+            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
+            <div class='mt-4'><h4>${item.title}</h4></div>
+            <div class="mt-2 pr-4">${item.content}</div>
+        </div>`);
+
+        const services1Content = services1.map((item) => `<div class="mt-3">
+            <h5>0${item.number}</h5>
+            <div class="">${item.content}</div>
+        </div>`);
+        const services2Content = services2.map((item) => `<div class="mt-3">
+            <h5>0${item.number}</h5>
+            <div class="">${item.content}</div>
+        </div>`);
+
+        document.getElementById("design1").innerHTML = design1Content.join('');
+        document.getElementById("design2").innerHTML = design2Content.join('');
+
+        document.getElementById("services1").innerHTML = services1Content.join('');
+        document.getElementById("services2").innerHTML = services2Content.join('');
+    </script>
 </body>
 </html>
