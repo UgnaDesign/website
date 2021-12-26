@@ -174,15 +174,15 @@
         const ccImage2 = ["8", "9"];
         const ccImage3 = ["12", "13", "14", "15"];
 
-        const ccImage1Content = ccImage1.map((item) => `<div class="col-md-6 mb-4">
-            <img src="images/cc_image${item}.jpg" class="w-100" alt="" srcset="">
-        </div>`);
-        const ccImage2Content = ccImage2.map((item) => `<div class="col-md-6 mb-4">
-            <img src="images/cc_image${item}.jpg" class="w-100" alt="" srcset="">
-        </div>`);
-        const ccImage3Content = ccImage3.map((item) => `<div class="col-md-6 mb-4">
-            <img src="images/cc_image${item}.jpg" class="w-100" alt="" srcset="">
-        </div>`);
+        const ccImageContent = (item) => {
+            return `<div class="col-md-6 mb-4">
+                <img src="images/cc_image${item}.jpg" class="w-100" alt="" srcset="">
+            </div>`;
+        }
+
+        const ccImage1Content = ccImage1.map((item) => ccImageContent(item));
+        const ccImage2Content = ccImage2.map((item) => ccImageContent(item));
+        const ccImage3Content = ccImage3.map((item) => ccImageContent(item));
 
         document.getElementById("ccImage1").innerHTML = ccImage1Content.join('');
         document.getElementById("ccImage2").innerHTML = ccImage2Content.join('');

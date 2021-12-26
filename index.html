@@ -164,25 +164,26 @@
             {number: "6", content: "Prototyping & Mockups"},
         ];
 
-        const design1Content = designs1.map((item) => `<div class="col-md-6 pr5 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
-        const design2Content = designs2.map((item) => `<div class="col-md-6 pr5 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
+        const designContent = (item) => {
+            return `<div class="col-md-6 pr5 mt-5">
+                <img src="images/${item.source}.jpg" class="w-100" alt="" srcset="">
+                <div class='mt-4'><h4>${item.title}</h4></div>
+                <div class="mt-2 pr-4">${item.content}</div>
+            </div>`;
+        }
 
-        const services1Content = services1.map((item) => `<div class="mt-3">
-            <h5>0${item.number}</h5>
-            <div class="">${item.content}</div>
-        </div>`);
-        const services2Content = services2.map((item) => `<div class="mt-3">
-            <h5>0${item.number}</h5>
-            <div class="">${item.content}</div>
-        </div>`);
+        const servicesContent = (item) => {
+            return `<div class="mt-3">
+                <h5>0${item.number}</h5>
+                <div class="">${item.content}</div>
+            </div>`;
+        }
+
+        const design1Content = designs1.map((item) => designContent(item));
+        const design2Content = designs2.map((item) => designContent(item));
+
+        const services1Content = services1.map((item) => servicesContent(item));
+        const services2Content = services2.map((item) => servicesContent(item));
 
         document.getElementById("design1").innerHTML = design1Content.join('');
         document.getElementById("design2").innerHTML = design2Content.join('');

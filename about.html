@@ -104,9 +104,13 @@
         const animated2 = ["Eco-Friendly", "Responsibility", "Value"];
         const clients = ["E2E", "LaundroLab", "Perromart", "herby", "Petbooks", "Shopexa", "Prosple", "Vgoodnews"];
 
-        const animated1Content = animated1.map((item) => `<img class="im" src="images/${item}.png" alt="">`);
-        const animated2Content = animated2.map((item) => `<img class="imgee" src="images/${item}.png" alt="">`);
-        const clientsContent = clients.map((item) => `<div><img class="w-100" src="images/${item}.png" alt=""></div>`);
+        const animatedContent = (className, item) => {
+            return `<img class="${className}" src="images/${item}.png" alt="">`;
+        }
+
+        const animated1Content = animated1.map((item) => animatedContent('im', item));
+        const animated2Content = animated2.map((item) => animatedContent('imgee', item));
+        const clientsContent = clients.map((item) => `<div>${animatedContent('w-100', item)}</div>`);
 
         document.getElementById("animated1").innerHTML = animated1Content;
         document.getElementById("animated2").innerHTML = animated2Content;

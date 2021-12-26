@@ -73,26 +73,18 @@
             {source: "BoostapiThumbnail", title: "Boostapi - Web Design", content: "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."},
         ];
 
-        const projects1Content = projects1.map((item) => `<div class="col-md-4 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
-        const projects2Content = projects2.map((item) => `<div class="col-md-4 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
-        const projects3Content = projects3.map((item) => `<div class="col-md-4 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
-        const projects4Content = projects4.map((item) => `<div class="col-md-4 mt-5">
-            <img src="images/${item.source}.jpg" class="w-100" alt="" srcset=""> 
-            <div class='mt-4'><h4>${item.title}</h4></div>
-            <div class="mt-2 pr-4">${item.content}</div>
-        </div>`);
+        const projectsContent = (item) => {
+            return `<div class="col-md-4 mt-5">
+                <img src="images/${item.source}.jpg" class="w-100" alt="" srcset="">
+                <div class='mt-4'><h4>${item.title}</h4></div>
+                <div class="mt-2 pr-4">${item.content}</div>
+            </div>`;
+        }
+
+        const projects1Content = projects1.map((item) => projectsContent(item));
+        const projects2Content = projects2.map((item) => projectsContent(item));
+        const projects3Content = projects3.map((item) => projectsContent(item));
+        const projects4Content = projects4.map((item) => projectsContent(item));
 
         document.getElementById("projects1").innerHTML = projects1Content.join('');
         document.getElementById("projects2").innerHTML = projects2Content.join('');
