@@ -100,21 +100,24 @@
     <my-footer></my-footer>
 
     <script>
-        const animated1 = ["Communication", "Teamwork", "Passion"];
-        const animated2 = ["Eco-Friendly", "Responsibility", "Value"];
-        const clients = ["E2E", "LaundroLab", "Perromart", "herby", "Petbooks", "Shopexa", "Prosple", "Vgoodnews"];
+        fetch("./mock/data.json")
+            .then(res => res.json())
+            .then(data => populateData(data.pages.about))
+            .catch(error => console.error(error));
+
+        const populateData = (item) => {
+            const animated1Content = item.animated1.map((item) => animatedContent('im', item));
+            const animated2Content = item.animated2.map((item) => animatedContent('imgee', item));
+            const clientsContent = item.clients.map((item) => `<div>${animatedContent('w-100', item)}</div>`);
+
+            document.getElementById("animated1").innerHTML = animated1Content;
+            document.getElementById("animated2").innerHTML = animated2Content;
+            document.getElementById("flex-container").innerHTML = clientsContent;
+        }
 
         const animatedContent = (className, item) => {
             return `<img class="${className}" src="images/${item}.png" alt="">`;
-        }
-
-        const animated1Content = animated1.map((item) => animatedContent('im', item));
-        const animated2Content = animated2.map((item) => animatedContent('imgee', item));
-        const clientsContent = clients.map((item) => `<div>${animatedContent('w-100', item)}</div>`);
-
-        document.getElementById("animated1").innerHTML = animated1Content;
-        document.getElementById("animated2").innerHTML = animated2Content;
-        document.getElementById("flex-container").innerHTML = clientsContent;
+        }        
     </script>
 </body>
 </html>

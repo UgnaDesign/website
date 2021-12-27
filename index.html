@@ -143,26 +143,22 @@
     <my-footer></my-footer>
 
     <script>
-        const designs1 = [
-            {source: "BoostapiThumbnail", title: "Boostapi - Web Design", content: "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."},
-            {source: "BrioThumbnail", title: "Brio - Logo Design", content: "Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'."},
-        ];
+        fetch("./mock/data.json")
+            .then(res => res.json())
+            .then(data => populateData(data.pages.index))
+            .catch(error => console.error(error));
 
-        const designs2 = [
-            {source: "Vgood.newThumbnail", title: "Vgood.news - App Design", content: "Positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!"},
-            {source: "SpecoThumbnail", title: "Speco - Branding", content: "Logo Design & branding for a glasses manufacturer company."},
-        ];
+        const populateData = (item) => {
+            const design1Content = item.designs1.map((item) => designContent(item));
+            const design2Content = item.designs2.map((item) => designContent(item));
+            const services1Content = item.services1.map((item) => servicesContent(item));
+            const services2Content = item.services2.map((item) => servicesContent(item));
 
-        const services1 = [
-            {number: "1", content: "Website Design"},
-            {number: "2", content: "UI/UX Design"},
-            {number: "3", content: "Mobile App Design"},
-        ];
-        const services2 = [
-            {number: "4", content: "Research & Discovery"},
-            {number: "5", content: "Wireframing"},
-            {number: "6", content: "Prototyping & Mockups"},
-        ];
+            document.getElementById("design1").innerHTML = design1Content.join('');
+            document.getElementById("design2").innerHTML = design2Content.join('');
+            document.getElementById("services1").innerHTML = services1Content.join('');
+            document.getElementById("services2").innerHTML = services2Content.join('');
+        }
 
         const designContent = (item) => {
             return `<div class="col-md-6 pr5 mt-5">
@@ -178,18 +174,6 @@
                 <div class="">${item.content}</div>
             </div>`;
         }
-
-        const design1Content = designs1.map((item) => designContent(item));
-        const design2Content = designs2.map((item) => designContent(item));
-
-        const services1Content = services1.map((item) => servicesContent(item));
-        const services2Content = services2.map((item) => servicesContent(item));
-
-        document.getElementById("design1").innerHTML = design1Content.join('');
-        document.getElementById("design2").innerHTML = design2Content.join('');
-
-        document.getElementById("services1").innerHTML = services1Content.join('');
-        document.getElementById("services2").innerHTML = services2Content.join('');
     </script>
 </body>
 </html>

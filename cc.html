@@ -170,23 +170,26 @@
     <my-footer></my-footer>
 
     <script>
-        const ccImage1 = ["3", "4", "5", "6"];
-        const ccImage2 = ["8", "9"];
-        const ccImage3 = ["12", "13", "14", "15"];
+        fetch("./mock/data.json")
+            .then(res => res.json())
+            .then(data => populateData(data.pages.cc))
+            .catch(error => console.error(error));
+
+        const populateData = (item) => {
+            const ccImage1Content = item.ccImage1.map((item) => ccImageContent(item));
+            const ccImage2Content = item.ccImage2.map((item) => ccImageContent(item));
+            const ccImage3Content = item.ccImage3.map((item) => ccImageContent(item));
+
+            document.getElementById("ccImage1").innerHTML = ccImage1Content.join('');
+            document.getElementById("ccImage2").innerHTML = ccImage2Content.join('');
+            document.getElementById("ccImage3").innerHTML = ccImage3Content.join('');
+        }
 
         const ccImageContent = (item) => {
             return `<div class="col-md-6 mb-4">
                 <img src="images/cc_image${item}.jpg" class="w-100" alt="" srcset="">
             </div>`;
         }
-
-        const ccImage1Content = ccImage1.map((item) => ccImageContent(item));
-        const ccImage2Content = ccImage2.map((item) => ccImageContent(item));
-        const ccImage3Content = ccImage3.map((item) => ccImageContent(item));
-
-        document.getElementById("ccImage1").innerHTML = ccImage1Content.join('');
-        document.getElementById("ccImage2").innerHTML = ccImage2Content.join('');
-        document.getElementById("ccImage3").innerHTML = ccImage3Content.join('');
     </script>
 </body>
 </html>

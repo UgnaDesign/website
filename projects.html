@@ -53,25 +53,22 @@
     <my-footer></my-footer>
 
     <script>
-        const projects1 = [
-            {source: "CcThumbnail", title: "Cultures Calendar - Web Design", content: "An app  that helps connects people by sharing and learning about different cultures and holidays."},
-            {source: "E2EThumbnail", title: "E2E - Web Design", content: "E2E, a not-for-profit NGO, helps train rural youth to independent and a leader in coffee communities in Southern America."},
-            {source: "BrioThumbnail", title: "Brio - Logo Design", content: "Logo designed for an upcoming and leading design agency to help launch their brand into the market."},
-        ];
-        const projects2 = [
-            {source: "Vgood.newThumbnail", title: "Vgood News - App Design", content: "Positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!"},
-            {source: "HerbyThumbnail", title: "Herby - App Design", content: "Health-boosting herbal blends with a DIY unique selling point that focuses on health and well-being goals."},
-            {source: "SpecoThumbnail", title: "Speco - Branding", content: "Logo Design & branding for a glasses manufacturer company."},
-        ];
-        const projects3 = [
-            {source: "LaundroLabThumbnail", title: "LaundroLab - App Design", content: "An upcoming next door laundromat with goal to change the status-quo."},
-            {source: "PetbookThumbnail", title: "Petbook - Web Design", content: "An information hub for everything and anything pets. Sponsored by Perromart.sg.com"},
-            {source: "ShopexaThumbnail", title: "Shopexa - Branding", content: "Logo Design for an e-commerce platform with a mindset of exponential growth."},
-        ];
-        const projects4 = [
-            {source: "ProspleThumbnail", title: "Prosple - Web Design", content: "A website that helps people start up their career with a boost."},
-            {source: "BoostapiThumbnail", title: "Boostapi - Web Design", content: "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."},
-        ];
+        fetch("./mock/data.json")
+            .then(res => res.json())
+            .then(data => populateData(data.pages.projects))
+            .catch(error => console.error(error));
+
+        const populateData = (item) => {
+            const projects1Content = item.projects1.map((item) => projectsContent(item));
+            const projects2Content = item.projects2.map((item) => projectsContent(item));
+            const projects3Content = item.projects3.map((item) => projectsContent(item));
+            const projects4Content = item.projects4.map((item) => projectsContent(item));
+
+            document.getElementById("projects1").innerHTML = projects1Content.join('');
+            document.getElementById("projects2").innerHTML = projects2Content.join('');
+            document.getElementById("projects3").innerHTML = projects3Content.join('');
+            document.getElementById("projects4").innerHTML = projects4Content.join('');
+        }
 
         const projectsContent = (item) => {
             return `<div class="col-md-4 mt-5">
@@ -80,16 +77,6 @@
                 <div class="mt-2 pr-4">${item.content}</div>
             </div>`;
         }
-
-        const projects1Content = projects1.map((item) => projectsContent(item));
-        const projects2Content = projects2.map((item) => projectsContent(item));
-        const projects3Content = projects3.map((item) => projectsContent(item));
-        const projects4Content = projects4.map((item) => projectsContent(item));
-
-        document.getElementById("projects1").innerHTML = projects1Content.join('');
-        document.getElementById("projects2").innerHTML = projects2Content.join('');
-        document.getElementById("projects3").innerHTML = projects3Content.join('');
-        document.getElementById("projects4").innerHTML = projects4Content.join('');
     </script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+{
+    "pages": {
+        "about": {
+            "animated1": [ "Communication", "Teamwork", "Passion"],
+            "animated2": [ "Eco-Friendly", "Responsibility", "Value"],
+            "clients": ["E2E", "LaundroLab", "Perromart", "herby", "Petbooks", "Shopexa", "Prosple", "Vgoodnews"]
+        },
+        "cc": {
+            "ccImage1": ["3", "4", "5", "6"],
+            "ccImage2": ["8", "9"],
+            "ccImage3": ["12", "13", "14", "15"]
+        },
+        "index": {
+            "designs1": [
+                {"source": "BoostapiThumbnail", "title": "Boostapi - Web Design", "content": "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."},
+                {"source": "BrioThumbnail", "title": "Brio - Logo Design", "content": "Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'."}
+            ],
+            "designs2": [
+                {"source": "Vgood.newThumbnail", "title": "Vgood.news - App Design", "content": "Positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!"},
+                {"source": "SpecoThumbnail", "title": "Speco - Branding", "content": "Logo Design & branding for a glasses manufacturer company."}
+            ],
+            "services1": [
+                {"number": "1", "content": "Website Design"},
+                {"number": "2", "content": "UI/UX Design"},
+                {"number": "3", "content": "Mobile App Design"}
+            ],
+            "services2": [
+                {"number": "4", "content": "Research & Discovery"},
+                {"number": "5", "content": "Wireframing"},
+                {"number": "6", "content": "Prototyping & Mockups"}
+            ]
+        },
+        "projects": {
+            "projects1": [
+                {"source": "CcThumbnail", "title": "Cultures Calendar - Web Design", "content": "An app  that helps connects people by sharing and learning about different cultures and holidays."},
+                {"source": "E2EThumbnail", "title": "E2E - Web Design", "content": "E2E, a not-for-profit NGO, helps train rural youth to independent and a leader in coffee communities in Southern America."},
+                {"source": "BrioThumbnail", "title": "Brio - Logo Design", "content": "Logo designed for an upcoming and leading design agency to help launch their brand into the market."}
+            ],
+            "projects2": [
+                {"source": "Vgood.newThumbnail", "title": "Vgood News - App Design", "content": "Positive news app that we have been working on. If you seek some positivity in your life, then head over to Vgood.news website right now - it's not just about cats and dogs!"},
+                {"source": "HerbyThumbnail", "title": "Herby - App Design", "content": "Health-boosting herbal blends with a DIY unique selling point that focuses on health and well-being goals."},
+                {"source": "SpecoThumbnail", "title": "Speco - Branding", "content": "Logo Design & branding for a glasses manufacturer company."}
+            ],
+            "projects3": [
+                {"source": "LaundroLabThumbnail", "title": "LaundroLab - App Design", "content": "An upcoming next door laundromat with goal to change the status-quo."},
+                {"source": "PetbookThumbnail", "title": "Petbook - Web Design", "content": "An information hub for everything and anything pets. Sponsored by Perromart.sg.com"},
+                {"source": "ShopexaThumbnail", "title": "Shopexa - Branding", "content": "Logo Design for an e-commerce platform with a mindset of exponential growth."}
+            ],
+            "projects4": [
+                {"source": "ProspleThumbnail", "title": "Prosple - Web Design", "content": "A website that helps people start up their career with a boost."},
+                {"source": "BoostapiThumbnail", "title": "Boostapi - Web Design", "content": "BoostAPI is an API that helps you increase revenue from your apps. Leveraging machine learning to increase subscription rates of users."}
+            ]
+        }
+    }
+}
