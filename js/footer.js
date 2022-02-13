@@ -36,9 +36,11 @@ class MyFooter extends HTMLElement {
             </div>
             <div class="row  pb-3 textCenter" style="padding-top: 8rem;">
                 <div class="col-md-10 color_white mt-3">
+                    Design Firm in Delhi, India </br>+91 7210519361
+                </div>
+                <div class="col-md-10 color_white mt-3">
                     Ugna design pvt ltd. All rights reserved.
                 </div>
-
                 <div class="col-md-2 mt-3">
                     <div class="color_white">
                         Made in India

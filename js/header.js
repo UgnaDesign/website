@@ -8,15 +8,6 @@ class MyHeader extends HTMLElement {
                             <img src="images/NavLogo.png" alt="" srcset=""  loading="lazy" width="106" >
                         </a>
                     </div>
-                    <div class="col-6 text-right navLeft mt-3">
-                        <div>
-                            Design Firm in 
-                        </div>
-                        <div>
-                            Delhi, India
-                        </div>
-                        <div>+91 7210519361</div>
-                    </div>
                 </div>
             </header>
         `
