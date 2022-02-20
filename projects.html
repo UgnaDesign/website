@@ -6,6 +6,53 @@
     <title>UGNA</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="icon" href="images/Favicon.jpg" type="image/x-icon"/>
+    <script type="module" src="./js/sidebar.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <my-sidebar></my-sidebar>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <my-header></my-header>
+
+            <section class="pt-5">
+                <div class="container mt-5">
+                    <div class="mt-5" style="margin-top: 150px;">
+                        <div class="pt-4">
+                            <h1 class="color_black">Our  <span class="color_orange">Designs.</span></h1>
+                        </div>
+
+                        <div class="row" id="projects1"></div>
+                        <div class="row" id="projects2"></div>
+                        <div class="row" id="projects3"></div>
+                        <div class="row" id="projects4">
+                            <!-- <div class="col-md-4  mt-5">
+                                <img src="images/BrioThumbnail.jpg" class="w-100" alt="" srcset=""> 
+                                <div class='mt-4 '>
+                                    <h4>Brio - Logo Design</h4>
+                                </div>
+                                <div class="mt-2 pr-4">
+                                    Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'.
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>   
+            </section>
+
+            <my-footer></my-footer>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -15,42 +62,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="icon" href="images/Favicon.jpg" type="image/x-icon"/>
-    <script type="module" src="./js/header.js"></script>
-    <script type="module" src="./js/footer.js"></script>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<body>
-    <my-header></my-header>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
 
-    <section class="pt-5">
-        <div class="container mt-5">
-            <div class="mt-5" style="margin-top: 150px;">
-                <div class="pt-4">
-                    <h1 class="color_black">Our  <span class="color_orange">Designs.</span></h1>
-                </div>
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
 
-                <div class="row" id="projects1"></div>
-                <div class="row" id="projects2"></div>
-                <div class="row" id="projects3"></div>
-                <div class="row" id="projects4">
-                    <!-- <div class="col-md-4  mt-5">
-                        <img src="images/BrioThumbnail.jpg" class="w-100" alt="" srcset=""> 
-                        <div class='mt-4 '>
-                            <h4>Brio - Logo Design</h4>
-                        </div>
-                        <div class="mt-2 pr-4">
-                            Brio's Logo was designed to incorporate all letters of the brand in the mark ie: 'b + R + I + o'.
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>   
-    </section>
-
-    <my-footer></my-footer>
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
 
     <script>
         fetch("./mock/data.json")
